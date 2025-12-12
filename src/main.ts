@@ -243,7 +243,7 @@ function renderStep() {
     
     // Display stack contents on the side
     const stackPoints = state.stack.map(p => `P${p.id}`).join(', ');
-    stackContent.textContent = `(Top) ${stackPoints}`;
+    stackContent.textContent = `${stackPoints} (Top)`;
 
     // Disable buttons if on first or last step
     btnPrev.disabled = currentStepIndex === 0;
