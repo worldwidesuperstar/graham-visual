@@ -1,0 +1,28 @@
+Graham Scan Visualizer
+Elki Laranas
+Tufts CS163 Computational Geometry
+
+Instructions: 
+
+    Deployed site: https://graham-visual.vercel.app/
+    Local: cd into root folder, run "npm run dev" in terminal
+
+Intersting things I learned/did:
+
+My biggest takeaway from this was that I couldn't just write a normal algorithm
+loop for a visualizer. I had to turn the whole thing into a sort of "state machine" 
+by saving snapshots at each step, of the stack, the candidate point, and the 
+left/right turn boolean just so the "Next" and "Prev" buttons would work.
+
+I also realized I could reuse code for the upper and lower hulls by reusing the
+exact same buildHull logic for the upper hull just by reversing the sorted 
+points array and running it again. I was initially worried about differentiating
+between the logic for the two, but I found that it worked just by doing that.
+
+I’ve used Plotly before for previous projects but I haven't applied it to anything
+geometric yet. It was cool to see how well I could use it to draw shapes and display
+a geometric algorithm from this class, although the algorithm I chose was pretty simple.
+
+I expected the geometry part to be complicated, but computing "Left" or "Right" turns 
+was simple and only required one cross-product formula, which made the logic straightforward
+to implement in one helper function.
