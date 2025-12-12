@@ -1,0 +1,58 @@
+body {
+    max-width: 100%;
+    padding: 0;
+}
+
+.main-content {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+#graph {
+    width: 600px;
+    height: 500px;
+    min-height: unset;
+    border: 1px solid #eee;
+    margin: 0 auto;
+    display: block;
+}
+
+.input-area {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#pointsInput {
+    resize: none;
+    height: auto;
+    min-height: 1.5em;
+    overflow-y: hidden;
+    width: 100%;
+}
+
+.controls-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.button-area {
+    flex: 0 0 auto;
+}
+
+#stack-display {
+    position: right;
+}
+
+.control-group {
+    margin-bottom: 1rem;
+}
+
+#btnPrev, #btnNext {
+    margin-top: 10px;
+}

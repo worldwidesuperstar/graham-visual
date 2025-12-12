@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>graham-viz</title>
+    <link rel="stylesheet" href="https://latex.vercel.app/style.min.css" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+    <div class="main-content">
+        <h2>Graham Scan (Incremental) Visualizer</h2>
+        <div class="input-area">
+            <label>Points (x,y): </label>
+            <textarea id="pointsInput" rows="1">2,2; 4,8; 5,5;</textarea>
+        </div>
+        <div class="controls-area">
+            <div class="button-area">
+                <div class="control-group">
+                    <button id="btnRandom">Randomize Points</button>
+                    <button id="btnStart">Start / Reset</button>
+                </div>
+                <div class="control-group">
+                    <button id="btnPrev" disabled>Back</button>
+                    <button id="btnNext" disabled>Forward</button>
+                    <span id="stepCounter"></span>
+                </div>
+                <div id="statusMessage">Ready to start</div>
+            </div>
+            <div id="stack-display">
+                <h4>Current Stack</h4>
+                <div id="stackContent"></div>
+            </div>
+        </div>
+        <div id="graph"></div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
